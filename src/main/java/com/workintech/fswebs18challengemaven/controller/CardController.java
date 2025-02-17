@@ -36,7 +36,7 @@ public class CardController {
         return cardRepository.save(card);
     }
 
-    @PutMapping
+    @PutMapping("/")
     public Card getUpdateCard(@RequestBody Card card){
         CardValidation.isValid(card);
         return cardRepository.update(card);
